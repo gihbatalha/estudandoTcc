@@ -10,6 +10,9 @@ var users = require('./routes/users');
 
 var app = express();
 
+var mongoose = require('mongoose');
+    mongoose.connect('mongodb://estudo:estudo@ds023560.mlab.com:23560/amicis');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -58,3 +61,5 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+
