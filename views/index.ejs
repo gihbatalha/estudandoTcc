@@ -10,7 +10,7 @@
     <p>Welcome to <%= title %></p>
     <p> {{mensagem}} </p>
     <ul> 
-    <li ng-repeat="user in users">{{user.name}}</li>
+    <li ng-repeat="user in users">{{user.name}} - {{user.senha}}</li>    
     </ul>
     <br>
     <br>
@@ -19,7 +19,15 @@
     <span>Nome: </span>
     <input type="text" ng-model="usuarioSendoAdicionado.name"/>
     {{usuarioSendoAdicionado.name}}
+
+    <br>
+    <span>Senha: </span>
+    <input type="password" ng-model="usuarioSendoAdicionado.senha"/>
     <a ng-click="add()">Adicionar</a>
+
+
+
+    {{pessoa.email}}
 
     <script src="/javascripts/app.js"></script>
 
